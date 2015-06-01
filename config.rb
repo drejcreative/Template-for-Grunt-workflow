@@ -1,3 +1,4 @@
+require "susy"
 preferred_syntax = :sass
 http_path = '/'
 css_dir = '_css'
