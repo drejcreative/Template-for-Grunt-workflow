@@ -1,7 +1,7 @@
 # Template for Grunt workflow with Git, Sass, Compass and Susy responsivce framework
 
 ![Template for Grunt workflow with Git, Sass, Compass and Susy responsivce framework](img.jpg)
-dsa
+
 This is my template for simple Grunt workflow with Git, Sass, Compass and Susy. This template give you few thing. First, grunt compile your Sass into css, then you can automatically minify your css and javascripts, then give you livereload of your web project in browser.
 
 ##Instructions
