@@ -4,7 +4,7 @@
   "description": "A simple workflow template for grunt with sass, compass, git ",
   "repository": {
    "type": "git",
-   "url": "https://github.com/drejcreative/Template-for-Grunt-workflow-with-Git-Sass-and-Compass.git"
+   "url": "https://github.com/drejcreative/Template-for-Grunt-workflow.git"
   },
   "author": "Andrej Vajagic",
   "dependencies" : {
