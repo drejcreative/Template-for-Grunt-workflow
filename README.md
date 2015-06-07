@@ -16,7 +16,7 @@ Clone this repository into your local machine using the terminal (mac) or Gitbas
 `git clone  https://github.com/drejcreative/Template-for-Grunt-workflow.git`
 
 CD to the folder with workflows
-Run > `npm-install` to install the project dependencies
+Run > `npm install` to install the project dependencies
 
 Install grunt.js via the Mac terminal or Gitbash on a PC > `npm install -g grunt-cli`
 
