@@ -56,7 +56,7 @@ module.exports = function(grunt) {
         files: ['build/*.html'],
       },//html
       css: {
-        files: ['components/sass/*.scss'],
+        files: ['components/sass/**/*.scss'],
         tasks: ['compass', 'autoprefixer']
       }//css
     }//watch
