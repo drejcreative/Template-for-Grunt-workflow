@@ -1,8 +1,9 @@
 require "susy"
+require "breakpoint"
 preferred_syntax = :sass
-http_path = '/'
-css_dir = '_css'
-sass_dir = '_/components/sass'
-images_dir = '_/img'
-javascripts_dir = '_/js'
-output_style = :nested #compressed, expanded, compact
+http_path = 'build'
+css_dir = 'build/css'
+sass_dir = 'components/sass'
+images_dir = 'build/images'
+javascripts_dir = 'build/js'
+output_style = :expanded #compressed, expanded, compact

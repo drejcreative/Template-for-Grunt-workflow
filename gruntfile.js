@@ -1,10 +1,13 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
+
+    pkg: grunt.file.readJSON('package.JSON'),
+
     uglify: {
       my_target: {
         files: {
-          '_/js/script.js': ['_/components/js/*.js']
+          'build/js/script.js': ['components/js/*.js']
           }//  files
         }//my_target
       },//uglify
@@ -17,20 +20,44 @@ module.exports = function(grunt) {
       }//dev
     },//compass
 
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions']
+      },//options
+      multiple_files: {
+        expand: true,
+        flatten: true,
+        src: 'build/css/*.css',
+        dest: ''
+      }
+    },
+
+    connect: {
+      sever: {
+        options: {
+          hostname: 'localhost',
+          port: 9999,
+          livereload: 35729,
+          open: true,
+          base: 'build'
+        }
+      }
+    },
+
     watch: {
       options: {
         livereload: true,
       },//options
       script: {
-        files: ['_/components/js/*.js'],
+        files: ['components/js/*.js'],
         tasks: ['uglify']
       },//script
       html: {
-        files: ['*.html'],
+        files: ['build/*.html'],
       },//html
       css: {
-        files: ['_/components/sass/*.scss'],
-        tasks: ['compass']
+        files: ['components/sass/*.scss'],
+        tasks: ['compass', 'autoprefixer']
       }//css
     }//watch
   });//grunt
@@ -38,7 +65,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['connect', 'watch']);
 
 };//exports
