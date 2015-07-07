@@ -28,7 +28,7 @@ module.exports = function(grunt) {
         expand: true,
         flatten: true,
         src: 'build/css/*.css',
-        dest: ''
+        dest: 'build/css'
       }
     },
 
